@@ -10,8 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_04_11_090058) do
-  create_table "blogs", force: :cascade do |t|
+ActiveRecord::Schema[7.1].define(version: 2025_04_15_125601) do
+  create_table "posts", force: :cascade do |t|
+    t.text "title", null: false
+    t.text "description", null: false
+    t.integer "upvotes", default: 0, null: false
+    t.integer "downvotes", default: 0, null: false
+    t.boolean "is_bloggable", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
