@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePosts < ActiveRecord::Migration[7.1]
   def change
     create_table :posts do |t|
@@ -5,7 +7,7 @@ class CreatePosts < ActiveRecord::Migration[7.1]
       t.text "description"
       t.integer "upvotes"
       t.integer "downvotes"
-      t.boolean "is_bloggable" 
+      t.boolean "is_bloggable"
       t.timestamps
     end
   end
